@@ -10,13 +10,8 @@ func MergeAlternately(word1 string, word2 string) string {
 		buffer = append(buffer, word2[i])
 	}
 
-	switch {
-	case len(word1) == len(word2):
-	case len(word2) > len(word1):
-		buffer = append(buffer, word2[minSize:]...)
-	default:
-		buffer = append(buffer, word1[minSize:]...)
-	}
+	buffer = append(buffer, word2[minSize:]...)
+	buffer = append(buffer, word1[minSize:]...)
 
 	return string(buffer)
 }
