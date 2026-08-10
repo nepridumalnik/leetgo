@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/merge-strings-alternately/description/?envType=study-plan-v2&envId=leetcode-75
-package merge_strings_alternately
+package mergestringsalternately
 
 func MergeAlternately(word1 string, word2 string) string {
 	minSize := min(len(word1), len(word2))

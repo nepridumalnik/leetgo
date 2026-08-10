@@ -1,22 +1,23 @@
-package merge_strings_alternately_test
+package tests
 
 import (
 	"fmt"
 	"testing"
 
-	merge_strings_alternately "github.com/nepridumalnik/leetgo/tests"
+	mergestringsalternately "github.com/nepridumalnik/leetgo/internal/merge_strings_alternately"
+
 	"github.com/stretchr/testify/require"
 )
 
-type testSuite struct {
+type testSuiteMergeStringsAlternately struct {
 	InputA   string
 	InputB   string
 	Expected string
 	Skip     bool
 }
 
-func TestTable(t *testing.T) {
-	tests := []testSuite{
+func Test_MergeStringsAlternately(t *testing.T) {
+	tests := []testSuiteMergeStringsAlternately{
 		{
 			InputA:   "cdf",
 			InputB:   "a",
@@ -45,7 +46,7 @@ func TestTable(t *testing.T) {
 				t.Skip()
 			}
 
-			result := merge_strings_alternately.MergeAlternately(test.InputA, test.InputB)
+			result := mergestringsalternately.MergeAlternately(test.InputA, test.InputB)
 			require.Equal(t, result, test.Expected, "got %s, expected %s", result, test.Expected)
 		})
 	}
