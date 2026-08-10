@@ -4,21 +4,18 @@ package merge_strings_alternately
 func MergeAlternately(word1 string, word2 string) string {
 	minSize := min(len(word1), len(word2))
 	buffer := make([]byte, 0, len(word1)+len(word2))
-	a := []byte(word1)
-	b := []byte(word2)
 
 	for i := range minSize {
-		buffer = append(buffer, byte(a[i]))
-		buffer = append(buffer, byte(b[i]))
+		buffer = append(buffer, word1[i])
+		buffer = append(buffer, word2[i])
 	}
 
 	switch {
-	case len(a) == len(b):
-		break
-	case len(a) > minSize:
-		buffer = append(buffer, a[minSize:]...)
+	case len(word1) == len(word2):
+	case len(word2) > len(word1):
+		buffer = append(buffer, word2[minSize:]...)
 	default:
-		buffer = append(buffer, b[minSize:]...)
+		buffer = append(buffer, word1[minSize:]...)
 	}
 
 	return string(buffer)
