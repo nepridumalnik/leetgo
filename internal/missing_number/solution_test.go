@@ -1,4 +1,4 @@
-package excelsheetcolumntitle_test
+package missingnumber_test
 
 import (
 	"fmt"
@@ -31,7 +31,7 @@ func Test_MissingNumber(t *testing.T) {
 			if test.Skip {
 				t.Skip("testcase marked as skipped")
 			}
-			result := excelsheetcolumntitle.MissingNumber(test.Input)
+			result := missingnumber.MissingNumber(test.Input)
 			require.Equal(t, result, test.Expected)
 		})
 	}

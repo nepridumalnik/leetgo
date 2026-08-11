@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/missing-number
-package excelsheetcolumntitle
+package missingnumber
 
 func MissingNumber(nums []int) int {
 	n := len(nums)
