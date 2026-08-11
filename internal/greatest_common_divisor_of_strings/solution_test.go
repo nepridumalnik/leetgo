@@ -1,10 +1,10 @@
-package tests
+package greatestcommondivisorofstrings_test
 
 import (
 	"fmt"
 	"testing"
 
-	greatestcommondivisorofstrings "github.com/nepridumalnik/leetgo/internal/greatest_common_divisor_of_strings"
+	"github.com/nepridumalnik/leetgo/internal/greatest_common_divisor_of_strings"
 	"github.com/stretchr/testify/require"
 )
 

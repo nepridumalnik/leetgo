@@ -1,10 +1,10 @@
-package tests
+package mergestringsalternately_test
 
 import (
 	"fmt"
 	"testing"
 
-	mergestringsalternately "github.com/nepridumalnik/leetgo/internal/merge_strings_alternately"
+	"github.com/nepridumalnik/leetgo/internal/merge_strings_alternately"
 
 	"github.com/stretchr/testify/require"
 )
