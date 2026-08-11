@@ -83,7 +83,7 @@ func CreateScaffold(data *Data) error {
 	}
 
 	// 1. Генерируем solution.go
-	solutionContent := fmt.Sprintf("// %s\npackage %s\n\n", data.URL, pkgName)
+	solutionContent := fmt.Sprintf("// %s\npackage %s\n", data.URL, pkgName)
 	solutionPath := filepath.Join(dirPath, "solution.go")
 	if err := os.WriteFile(solutionPath, []byte(solutionContent), 0644); err != nil {
 		return fmt.Errorf("failed to write solution.go: %w", err)
