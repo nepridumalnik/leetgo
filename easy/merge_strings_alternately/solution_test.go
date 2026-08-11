@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/nepridumalnik/leetgo/internal/merge_strings_alternately"
+	"github.com/nepridumalnik/leetgo/easy/merge_strings_alternately"
 
 	"github.com/stretchr/testify/require"
 )

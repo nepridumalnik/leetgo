@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/nepridumalnik/leetgo/internal/missing_number"
+	"github.com/nepridumalnik/leetgo/easy/missing_number"
+
 	"github.com/stretchr/testify/require"
 )
 
