@@ -10,7 +10,7 @@ import (
 )
 
 func Test_FindNUniqueIntegersSumUpToZero(t *testing.T) {
-	for i := 4; i < 1000; i++ {
+	for i := 1; i < 1000; i++ {
 		t.Run(fmt.Sprintf("example_%d", i), func(t *testing.T) {
 			result := findnuniqueintegerssumuptozero.SumZero(i)
 			sum := 0

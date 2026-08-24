@@ -20,4 +20,16 @@ func sumZeroV1(n int) []int {
 	return out
 }
 
-var SumZero func(n int) []int = sumZeroV1
+func sumZeroV2(n int) []int {
+	out := make([]int, n)
+	center := n / 2
+
+	for i := 1; i <= center; i++ {
+		out[i-1] = -i
+		out[n-i] = i
+	}
+
+	return out
+}
+
+var SumZero func(n int) []int = sumZeroV2
