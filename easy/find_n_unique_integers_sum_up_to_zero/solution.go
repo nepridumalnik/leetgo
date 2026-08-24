@@ -22,9 +22,7 @@ func sumZeroV1(n int) []int {
 
 func sumZeroV2(n int) []int {
 	out := make([]int, n)
-	center := n / 2
-
-	for i := 1; i <= center; i++ {
+	for i := 1; i <= n/2; i++ {
 		out[i-1] = -i
 		out[n-i] = i
 	}
