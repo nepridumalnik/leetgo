@@ -14,9 +14,14 @@ func Test_FindNUniqueIntegersSumUpToZero(t *testing.T) {
 		t.Run(fmt.Sprintf("example_%d", i), func(t *testing.T) {
 			result := findnuniqueintegerssumuptozero.SumZero(i)
 			sum := 0
+			zeros := 0
 
 			for _, n := range result {
 				sum += n
+				if n == 0 {
+					zeros++
+				}
+				require.LessOrEqual(t, zeros, 1)
 			}
 
 			require.Zero(t, sum)
